@@ -4,12 +4,11 @@ import "./env.mjs"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
-  // 1. 忽略 TypeScript 类型错误
   typescript: {
     ignoreBuildErrors: true,
   },
-  // 2. 忽略 ESLint 报错
   eslint: {
     ignoreDuringBuilds: true,
   },
