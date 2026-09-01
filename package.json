@@ -6,14 +6,13 @@
     "name": "shadcn",
     "url": "https://twitter.com/shadcn"
   },
-  "scripts": {
+"scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
-    "build": "contentlayer build && next build && mkdir -p .edgeone/edge-functions && echo \"export default { fetch: () => new Response('OK') }\" > .edgeone/edge-functions/index.js",
+    "build": "contentlayer build && next build",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
-   "build": "prisma generate && contentlayer build && next build",
-"postinstall": ""
+    "preview": "next build && next start",
     "postinstall": "prisma generate"
   },
   "dependencies": {
