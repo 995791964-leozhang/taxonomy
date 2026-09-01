@@ -8,8 +8,7 @@
   },
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
-    "build": "prisma generate && contentlayer build && next build",
-"postinstall": ""
+    "build": "contentlayer build && next build && mkdir -p .edgeone/edge-functions && echo \"export default { fetch: () => new Response('OK') }\" > .edgeone/edge-functions/index.js",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
