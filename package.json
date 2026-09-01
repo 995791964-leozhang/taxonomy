@@ -8,11 +8,13 @@
   },
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
-    "build": "contentlayer build && next build",
+    "build": "prisma generate && contentlayer build && next build",
+"postinstall": ""
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
-    "preview": "next build && next start",
+   "build": "prisma generate && contentlayer build && next build",
+"postinstall": ""
     "postinstall": "prisma generate"
   },
   "dependencies": {
