@@ -5,6 +5,7 @@ import "./env.mjs"
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   images: {
     domains: ["avatars.githubusercontent.com"],
   },
