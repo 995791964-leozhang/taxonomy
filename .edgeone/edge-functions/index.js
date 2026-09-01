@@ -1,5 +1,3 @@
-export default {
-  async fetch(request) {
-    return new Response("OK");
-  },
-};
+addEventListener('fetch', (event) => {
+  event.respondWith(new Response('OK', { status: 200 }));
+});
