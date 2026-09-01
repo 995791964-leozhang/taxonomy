@@ -5,13 +5,14 @@ import "./env.mjs"
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
   images: {
+    unoptimized: true,
     domains: ["avatars.githubusercontent.com"],
   },
   experimental: {
     appDir: true,
     serverComponentsExternalPackages: ["@prisma/client"],
+    esmExternals: 'loose',
   },
 }
 
